@@ -20,8 +20,6 @@ use testapi;
 sub run {
 	assert_screen 'bootloader';
 	send_key 'ret';
-
-	assert_screen 'init', 60;
 }
 
 1;

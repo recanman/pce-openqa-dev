@@ -14,12 +14,12 @@
 use strict;
 use warnings;
 
-use Mojo::Base -strict;
+use Mojo::Base 'basetest';
 use testapi;
-use autotest;
 
-autotest::loadtest "tests/boot.pm";
-autotest::loadtest "tests/init.pm";
-autotest::loadtest "tests/eula.pm";
+sub run {
+	assert_screen 'init_mountroot', 60;
+	assert_screen 'init_dhcp', 60;
+}
 
 1;
