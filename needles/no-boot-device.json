@@ -1,0 +1,13 @@
+{
+	"area": [
+		{
+			"xpos": 0,
+			"ypos": 364,
+			"width": 170,
+			"height": 23,
+			"type": "match"
+		}
+	],
+	"properties": [],
+	"tags": ["no-boot-device"]
+}

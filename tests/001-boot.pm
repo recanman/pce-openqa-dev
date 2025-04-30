@@ -14,11 +14,12 @@
 use strict;
 use warnings;
 
-use Mojo::Base -strict;
+use Mojo::Base 'basetest';
 use testapi;
-use autotest;
 
-autotest::loadtest "tests/001-boot.pm";
-autotest::loadtest "tests/002-eula.pm";
+sub run {
+	assert_screen 'boot-firmware';
+	return undef if match_has_tag 'no-boot-device';
+}
 
 1;
