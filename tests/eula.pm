@@ -14,8 +14,17 @@
 use strict;
 use warnings;
 
+use Mojo::Base 'basetest';
+use testapi;
+
 sub run {
-	print "Running from eula.pm!\n";
+	assert_screen 'bootloader';
+	return undef if match_has_tag 'no-boot-media';
+
+	send_key 'ret';
+
+	# Wait for EULA to appear
+	assert_screen 'eula', 300;
 }
 
 1;

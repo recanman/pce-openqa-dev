@@ -14,6 +14,8 @@
 use strict;
 use warnings;
 
+use Mojo::Base -strict;
+use testapi;
 use autotest;
 
 autotest::loadtest "tests/eula.pm";
