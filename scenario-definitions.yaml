@@ -1,0 +1,22 @@
+---
+products:
+  local:
+    distri: "pce"
+    flavor: "dist"
+    arch: "amd64"
+    version: "1.0"
+
+machines:
+  amd64:
+    backend: qemu
+    settings:
+      WORKER_CLASS: qemu_x86_64
+  arm64:
+    backend: qemu
+    settings:
+      WORKER_CLASS: qemu_aarch64
+
+job_templates:
+  eula:
+    product: "local"
+    machine: "amd64"
