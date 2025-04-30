@@ -18,7 +18,7 @@ use Mojo::Base -strict;
 use testapi;
 use autotest;
 
-autotest::loadtest "tests/001-boot.pm";
-autotest::loadtest "tests/002-eula.pm";
+autotest::loadtest "tests/boot.pm";
+autotest::loadtest "tests/eula.pm";
 
 1;
