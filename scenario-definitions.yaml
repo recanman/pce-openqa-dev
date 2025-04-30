@@ -1,9 +1,14 @@
 ---
 products:
-  local:
-    distri: "pce"
-    flavor: "dist"
+  pextra-ce-ose-amd64:
+    distri: "pextra-ce"
+    flavor: "ose"
     arch: "amd64"
+    version: "1.0"
+  pextra-ce-ose-arm64:
+    distri: "pextra-ce"
+    flavor: "ose"
+    arch: "arm64"
     version: "1.0"
 
 machines:
@@ -15,6 +20,13 @@ machines:
     backend: qemu
     settings:
       WORKER_CLASS: qemu_aarch64
+
+scenarios:
+  amd64:
+    pextra-ce-ose-1.0-amd64:
+      machine: amd64
+      priority: 50
+
 
 job_templates:
   eula:

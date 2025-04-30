@@ -19,9 +19,7 @@ use testapi;
 
 sub run {
 	assert_screen 'boot-firmware';
-	if (match_has_tag 'no-boot-device') {
-		die "No boot device found";
-	}
+	die "No boot device found" if match_has_tag 'no-boot-media';
 }
 
 1;
