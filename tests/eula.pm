@@ -19,12 +19,9 @@ use testapi;
 
 sub run {
 	assert_screen 'bootloader';
-	return undef if match_has_tag 'no-boot-media';
 
 	send_key 'ret';
-
-	# Wait for EULA to appear
-	assert_screen 'eula', 300;
+	assert_screen 'eula', 45;
 }
 
 1;
