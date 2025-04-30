@@ -18,8 +18,10 @@ use Mojo::Base 'basetest';
 use testapi;
 
 sub run {
-	assert_screen 'eula', 180;
-	assert_and_click 'eula_accept';
+	assert_screen 'bootloader';
+	send_key 'ret';
+
+	assert_screen 'init' 60;
 }
 
 1;
