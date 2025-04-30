@@ -18,8 +18,7 @@ use Mojo::Base 'basetest';
 use testapi;
 
 sub run {
-	assert_screen 'network';
-	assert_and_click 'network_continue';
+	assert_and_click 'network';
 }
 
 1;
