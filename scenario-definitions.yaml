@@ -21,14 +21,12 @@ machines:
     settings:
       WORKER_CLASS: qemu_aarch64
 
+defaults:
+  amd64:
+    machine: amd64
+    priority: 50
+
 scenarios:
   amd64:
-    pextra-ce-ose-1.0-amd64:
-      machine: amd64
-      priority: 50
-
-
-job_templates:
-  eula:
-    product: "local"
-    machine: "amd64"
+    pextra-ce-1.0-ose-amd64:
+      - pextra-ce
