@@ -14,14 +14,14 @@
 use strict;
 use warnings;
 
-use Mojo::Base -strict;
+use Mojo::Base 'basetest';
 use testapi;
-use autotest;
 
-autotest::loadtest "tests/boot.pm";
-autotest::loadtest "tests/init.pm";
-autotest::loadtest "tests/eula.pm";
-autotest::loadtest "tests/network.pm";
-autotest::loadtest "tests/license.pm";
+sub run {
+	assert_screen 'license';
+	assert_and_click 'license_textbox';
+	type_string get_var('LICENSE_KEY');
+	assert_and_click 'license_continue';
+}
 
 1;
