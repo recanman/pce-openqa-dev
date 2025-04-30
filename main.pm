@@ -21,5 +21,6 @@ use autotest;
 autotest::loadtest "tests/boot.pm";
 autotest::loadtest "tests/init.pm";
 autotest::loadtest "tests/eula.pm";
+autotest::loadtest "tests/network.pm";
 
 1;
