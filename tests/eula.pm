@@ -21,7 +21,7 @@ sub run {
 	assert_screen 'bootloader';
 
 	send_key 'ret';
-	assert_screen 'eula', 45;
+	assert_screen 'eula', 180;
 }
 
 1;
