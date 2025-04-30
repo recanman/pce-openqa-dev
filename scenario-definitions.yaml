@@ -1,25 +1,9 @@
 ---
 products:
-  pextra-ce-ose-amd64:
-    distri: "pextra-ce"
-    flavor: "ose"
-    arch: "amd64"
+  pextra-ce-1.0-ose-amd64:
+    distri: pextra-ce
+    flavor: ose
     version: "1.0"
-  pextra-ce-ose-arm64:
-    distri: "pextra-ce"
-    flavor: "ose"
-    arch: "arm64"
-    version: "1.0"
-
-machines:
-  amd64:
-    backend: qemu
-    settings:
-      WORKER_CLASS: qemu_x86_64
-  arm64:
-    backend: qemu
-    settings:
-      WORKER_CLASS: qemu_aarch64
 
 defaults:
   amd64:
