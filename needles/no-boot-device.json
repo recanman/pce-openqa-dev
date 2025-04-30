@@ -9,5 +9,5 @@
 		}
 	],
 	"properties": [],
-	"tags": ["no-boot-device"]
+	"tags": ["boot-firmware"]
 }
