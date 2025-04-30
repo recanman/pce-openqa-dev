@@ -21,7 +21,7 @@ sub run {
 	assert_screen 'license';
 	assert_and_click 'license_textbox';
 	type_string get_var('LICENSE_KEY');
-	assert_and_click 'license_continue';
+	assert_and_click 'license_next';
 }
 
 1;

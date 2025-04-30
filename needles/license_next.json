@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 947,
+      "ypos": 717,
+      "width": 73,
+      "height": 44,
+      "type": "match",
+      "click_point": {
+        "xpos": 36.5,
+        "ypos": 22
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "license_next"
+  ]
+}

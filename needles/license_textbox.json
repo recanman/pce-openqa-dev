@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 346,
+      "ypos": 629,
+      "width": 375,
+      "height": 30,
+      "type": "match",
+      "click_point": {
+        "xpos": 187.5,
+        "ypos": 15
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "license_textbox"
+  ]
+}
