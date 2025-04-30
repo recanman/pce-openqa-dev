@@ -22,6 +22,7 @@ sub run {
 
 	send_key 'ret';
 	assert_screen 'eula', 180;
+	assert_and_click 'eula_accept';
 }
 
 1;

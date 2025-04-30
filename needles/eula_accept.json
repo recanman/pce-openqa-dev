@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 937,
+      "ypos": 719,
+      "width": 80,
+      "height": 45,
+      "type": "match",
+      "click_point": {
+        "xpos": 40,
+        "ypos": 22.5
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "eula"
+  ]
+}
