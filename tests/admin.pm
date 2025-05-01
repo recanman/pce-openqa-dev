@@ -23,7 +23,7 @@ sub run {
 
 	assert_and_click 'admin_password';
 	type_string $admin_password;
-	assert_and_click 'admin_confirm_password';
+	assert_and_click 'admin_confirmpassword';
 	type_string $admin_password;
 
 	assert_and_click 'admin_next';
