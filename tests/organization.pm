@@ -22,9 +22,6 @@ sub run {
 	assert_and_click 'organization_country1'; # Click on the country selection
 	assert_and_click 'organization_country2'; # Select the country
 
-	assert_and_click 'organization_tz1'; # Click on the timezone selection
-	assert_and_click 'organization_tz2'; # Select the timezone
-
 	assert_and_click 'organization_next';
 }
 
