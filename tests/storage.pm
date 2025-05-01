@@ -14,17 +14,12 @@
 use strict;
 use warnings;
 
-use Mojo::Base -strict;
+use Mojo::Base 'basetest';
 use testapi;
-use autotest;
 
-autotest::loadtest "tests/boot.pm";
-autotest::loadtest "tests/init.pm";
-autotest::loadtest "tests/eula.pm";
-autotest::loadtest "tests/network.pm";
-autotest::loadtest "tests/license.pm";
-autotest::loadtest "tests/organization.pm";
-autotest::loadtest "tests/admin.pm";
-autotest::loadtest "tests/storage.pm";
+sub run {
+	assert_screen 'storage';
+	assert_and_click 'storage_next';
+}
 
 1;
