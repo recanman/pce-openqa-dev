@@ -14,15 +14,18 @@
 use strict;
 use warnings;
 
-use Mojo::Base -strict;
+use Mojo::Base 'basetest';
 use testapi;
-use autotest;
 
-autotest::loadtest "tests/boot.pm";
-autotest::loadtest "tests/init.pm";
-autotest::loadtest "tests/eula.pm";
-autotest::loadtest "tests/network.pm";
-autotest::loadtest "tests/license.pm";
-autotest::loadtest "tests/organization.pm";
+sub run {
+	assert_screen 'organization';
+	assert_and_click 'organization_country1'; # Click on the country selection
+	assert_and_click 'organization_country2'; # Select the country
+
+	assert_and_click 'organization_tz1'; # Click on the timezone selection
+	assert_and_click 'organization_tz2'; # Select the timezone
+
+	assert_and_click 'organization_next';
+}
 
 1;
