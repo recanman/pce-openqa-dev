@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 365,
+      "ypos": 562,
+      "width": 391,
+      "height": 38,
+      "type": "match",
+      "click_point": {
+        "xpos": 195.5,
+        "ypos": 19
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "organization_country1"
+  ]
+}
