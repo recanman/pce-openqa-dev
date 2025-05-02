@@ -14,18 +14,24 @@
 use strict;
 use warnings;
 
-use Mojo::Base -strict;
+use Mojo::Base 'basetest';
 use testapi;
-use autotest;
 
-autotest::loadtest "tests/isosize.pm";
-autotest::loadtest "tests/boot.pm";
-autotest::loadtest "tests/init.pm";
-autotest::loadtest "tests/eula.pm";
-autotest::loadtest "tests/network.pm";
-autotest::loadtest "tests/license.pm";
-autotest::loadtest "tests/organization.pm";
-autotest::loadtest "tests/admin.pm";
-autotest::loadtest "tests/storage.pm";
+sub run {
+	my $iso = get_var('ISO');
+	my $iso_size = -s $iso;
+
+	# MiB -> bytes
+	my $min_size = get_var('MIN_SIZE');
+	my $min_size_bytes = $min_size * 1024 ** 2;
+
+	my $max_size = get_var('MAX_SIZE') * 1024 ** 2;
+	my $max_size_bytes = $max_size * 1024 ** 2;
+
+	my $min_max_string = "(iso size: $iso_size bytes, min: $min_size_bytes bytes, max: $max_size_bytes bytes)";
+
+	die "ISO size is less than minimum size $min_max_string" if $iso_size < $min_size_bytes;
+	die "ISO size is greater than maximum size $min_max_string" if $iso_size > $max_size_bytes;
+}
 
 1;
