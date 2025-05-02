@@ -27,5 +27,6 @@ autotest::loadtest "tests/license.pm";
 autotest::loadtest "tests/organization.pm";
 autotest::loadtest "tests/admin.pm";
 autotest::loadtest "tests/storage.pm";
+autotest::loadtest "tests/install.pm";
 
 1;
