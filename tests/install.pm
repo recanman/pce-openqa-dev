@@ -18,22 +18,9 @@ use Mojo::Base 'basetest';
 use testapi;
 
 sub run {
-	my $iso = get_var('ISO');
-	my $iso_size = -s $iso;
-
-	# MiB -> bytes
-	my $min_size = get_var('MIN_SIZE');
-	my $min_size_bytes = $min_size * 1024 ** 2;
-
-	my $max_size = get_var('MAX_SIZE') * 1024 ** 2;
-	my $max_size_bytes = $max_size * 1024 ** 2;
-
-	my $min_max_string = "(iso size: $iso_size bytes, min: $min_size_bytes bytes, max: $max_size_bytes bytes)";
-
-	die "ISO size is less than minimum size $min_max_string" if $iso_size < $min_size_bytes;
-	die "ISO size is greater than maximum size $min_max_string" if $iso_size > $max_size_bytes;
-
-	diag "ISO size test passed";
+	assert_and_click 'install';
+	assert_screen 'installing';
+	assert_screen 'install_complete', 1800; # Allow up to 30 minutes for installation
 }
 
 1;
