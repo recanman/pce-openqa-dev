@@ -19,7 +19,7 @@ use testapi;
 
 sub run {
 	assert_and_click 'install';
-	assert_and_click 'install_complete', [timeout => 1800]; # Allow up to 30 minutes for installation, then reboot
+	assert_and_click 'install_complete', timeout => 1800; # Allow up to 30 minutes for installation, then reboot
 }
 
 1;
