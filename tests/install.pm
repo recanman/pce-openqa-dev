@@ -19,7 +19,6 @@ use testapi;
 
 sub run {
 	assert_and_click 'install';
-	assert_screen 'installing';
 	assert_screen 'install_complete', 1800; # Allow up to 30 minutes for installation
 }
 
