@@ -1,0 +1,19 @@
+{
+  "area": [
+    {
+      "xpos": 167,
+      "ypos": 482,
+      "width": 401,
+      "height": 40,
+      "type": "match",
+      "click_point": {
+        "xpos": 200.5,
+        "ypos": 20
+      }
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "storage_fs1"
+  ]
+}
