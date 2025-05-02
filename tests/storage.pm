@@ -22,6 +22,7 @@ sub run {
 
 	assert_and_click 'storage_fs1'; # Click on the filesystem selection
 	assert_and_click 'storage_fs2'; # Click on the filesystem selection
+	# TODO: test each filesystem option
 
 	assert_and_click 'storage_disk'; # We assume a disk /dev/vda exists at this position
 
