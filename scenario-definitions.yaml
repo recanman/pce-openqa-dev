@@ -9,8 +9,12 @@ defaults:
   amd64:
     machine: amd64
     priority: 50
+    settings:
+      LICENSE_KEY: "XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-V3"
+      HDDSIZEGB: "16"
+      QEMURAM: "4096"
 
 scenarios:
   amd64:
     pextra-ce-1.0-ose-amd64:
-      - pextra-ce
+      - pce-openqa-dev
